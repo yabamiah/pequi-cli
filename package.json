@@ -1,10 +1,29 @@
 {
-  "name": "@pequi/cli",
+  "name": "pequi-cli",
   "version": "0.1.0",
   "description": "CLI e servidor MCP para sincronizar diagramas Mermaid com o Pequi",
+  "keywords": [
+    "mermaid",
+    "diagram",
+    "ai"
+  ],
+  "homepage": "https://github.com/yabamiah/pequi-cli#readme",
+  "bugs": {
+    "url": "https://github.com/yabamiah/pequi-cli/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yabamiah/pequi-cli.git"
+  },
+  "license": "MIT",
+  "author": "Vinicius Martins",
   "type": "module",
+  "main": "index.js",
   "bin": {
     "pequi": "bin/pequi.js"
+  },
+  "directories": {
+    "test": "test"
   },
   "files": [
     "assets",
@@ -12,11 +31,10 @@
     "src",
     "README.md"
   ],
-  "engines": {
-    "node": ">=20"
-  },
   "scripts": {
     "test": "node --test test/*.test.mjs"
   },
-  "license": "MIT"
+  "engines": {
+    "node": ">=20"
+  }
 }
