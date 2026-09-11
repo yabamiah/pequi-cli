@@ -1,0 +1,22 @@
+{
+  "name": "@pequi/cli",
+  "version": "0.1.0",
+  "description": "CLI e servidor MCP para sincronizar diagramas Mermaid com o Pequi",
+  "type": "module",
+  "bin": {
+    "pequi": "bin/pequi.js"
+  },
+  "files": [
+    "assets",
+    "bin",
+    "src",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "license": "MIT"
+}
