@@ -3,8 +3,6 @@
 </p>
 
 [![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![bundle][bundle-src]][bundle-href]
 [![License][license-src]][license-href]
 
 Uma CLI e um servidor MCP para transformar código local em diagramas Mermaid e
@@ -37,15 +35,10 @@ node --version
 
 ## Instalação
 
-### A partir do código-fonte
-
-Depois de baixar ou clonar este repositório, abra um terminal na pasta
-`pequi-cli`:
+Instale a versão mais recente publicada no npm:
 
 ```bash
-cd pequi-cli
-npm install
-npm install --global .
+npm install --global pequi-cli
 ```
 
 Confirme que o comando está disponível:
@@ -54,8 +47,17 @@ Confirme que o comando está disponível:
 pequi help
 ```
 
-Para desenvolvimento da própria CLI, você pode substituir a instalação global
-por `npm link`.
+Para atualizar uma instalação existente:
+
+```bash
+npm install --global pequi-cli@latest
+```
+
+Você também pode executar um comando sem instalar o pacote globalmente:
+
+```bash
+npx --yes pequi-cli help
+```
 
 ## Início rápido
 
@@ -156,6 +158,20 @@ Clientes que usam o formato `mcpServers` podem receber esta configuração:
     "pequi": {
       "command": "pequi",
       "args": ["mcp", "serve"]
+    }
+  }
+}
+```
+
+Se preferir não instalar o pacote globalmente, o cliente também pode baixá-lo
+e executá-lo pelo npm com `npx`:
+
+```json
+{
+  "mcpServers": {
+    "pequi": {
+      "command": "npx",
+      "args": ["--yes", "pequi-cli", "mcp", "serve"]
     }
   }
 }
@@ -340,8 +356,8 @@ da API automaticamente.
 
 ### O comando `pequi` não foi encontrado
 
-Confirme a instalação com `npm install --global .` na pasta da CLI. Em seguida,
-abra um novo terminal e execute `pequi help`.
+Confirme a instalação com `npm install --global pequi-cli`. Em seguida, abra um
+novo terminal e execute `pequi help`.
 
 ### A conta não possui um projeto
 
@@ -386,11 +402,7 @@ node bin/pequi.js help
 O servidor MCP reserva `stdout` para mensagens JSON-RPC. Logs e mensagens de
 diagnóstico devem ser enviados por `stderr`.
 
-[npm-version-src]: https://img.shields.io/npm/v/%40pequi%2Fcli.svg?style=flat&colorA=4A2E1C&colorB=7C8A3C
-[npm-version-href]: https://www.npmjs.com/package/@pequi/cli
-[npm-downloads-src]: https://img.shields.io/npm/dm/%40pequi%2Fcli.svg?style=flat&colorA=4A2E1C&colorB=F5A623
-[npm-downloads-href]: https://www.npmjs.com/package/@pequi/cli
-[bundle-src]: https://img.shields.io/bundlephobia/minzip/%40pequi%2Fcli.svg?style=flat&colorA=4A2E1C&colorB=7C8A3C
-[bundle-href]: https://bundlephobia.com/package/@pequi/cli
-[license-src]: https://img.shields.io/badge/license-MIT-F5A623.svg?style=flat&labelColor=4A2E1C
-[license-href]: ./LICENSE
+[npm-version-src]: https://img.shields.io/npm/v/pequi-cli?style=flat&colorA=18181B&colorB=7C8A3C
+[npm-version-href]: https://www.npmjs.com/package/pequi-cli
+[license-src]: https://img.shields.io/github/license/yabamiah/pequi-cli.svg?style=flat&colorA=18181B&colorB=7C8A3C
+[license-href]: https://github.com/yabamiah/pequi-cli/blob/main/LICENSE
